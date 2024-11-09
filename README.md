@@ -4,7 +4,7 @@
 
 ## 📦 Supported Platforms
 
-| <div><img src="https://github.com/okineadev/dotload/assets/81070564/99544c04-51e7-41b5-95f7-0828cfc97617" alt="Windows logo" width="30"/></div> **Windows** | <div><img src="https://github.com/okineadev/dotload/raw/main/public/macos-light-logo.svg#gh-light-mode-only" alt="macOS logo" width="30"/><img src="https://github.com/okineadev/dotload/raw/main/public/macos-light-logo.svg#gh-dark-mode-only" alt="macOS logo" width="30"/></div> **macOS** | <div><img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Icons8_flat_linux.svg" alt="Linux logo" width="30"/></div> **Linux** |
+| <div><img src="https://github.com/cli-stuff/dotload/assets/81070564/99544c04-51e7-41b5-95f7-0828cfc97617" alt="Windows logo" width="30"/></div> **Windows** | <div><img src="https://github.com/cli-stuff/dotload/raw/main/public/macos-light-logo.svg#gh-light-mode-only" alt="macOS logo" width="30"/><img src="https://github.com/cli-stuff/dotload/raw/main/public/macos-light-logo.svg#gh-dark-mode-only" alt="macOS logo" width="30"/></div> **macOS** | <div><img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Icons8_flat_linux.svg" alt="Linux logo" width="30"/></div> **Linux** |
 | :-: | :-: | :-: |
 | ✅ | ❌ | ❌ |
 
@@ -38,8 +38,8 @@ These commands will output the installed versions of the respective tools.
 
 ## 🧑‍💻 Contributing
 
-Feel free to open a [pull request](https://github.com/okineadev/platform-tools-installers-cli/pulls) or [issue](https://github.com/okineadev/platform-tools-installers-cli/issues) if you have any suggestions, improvements, or bug reports.
+Feel free to open a [pull request](https://github.com/cli-stuff/platform-tools-installers-cli/pulls) or [issue](https://github.com/cli-stuff/platform-tools-installers-cli/issues) if you have any suggestions, improvements, or bug reports.
 
 ## 📜 License
 
-This project is licensed under the [MIT License](https://github.com/okineadev/platform-tools-installers-cli/blob/main/LICENSE).
+This project is licensed under the [MIT License](LICENSE).
