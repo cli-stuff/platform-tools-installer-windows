@@ -40,6 +40,13 @@ These commands will output the installed versions of the respective tools.
 
 Feel free to open a [pull request](https://github.com/cli-stuff/platform-tools-installers-cli/pulls) or [issue](https://github.com/cli-stuff/platform-tools-installers-cli/issues) if you have any suggestions, improvements, or bug reports.
 
+## ❤️ Support
+
+If you like this project, consider supporting it by starring ⭐ it on GitHub, sharing it with your friends, or buying me a coffee ☕:
+
+- <https://send.monobank.ua/jar/6rUVs4yasg>
+- <https://donatello.to/okineadev>
+
 ## 📜 License
 
 This project is licensed under the [MIT License](LICENSE).
