@@ -42,10 +42,7 @@ Feel free to open a [pull request](https://github.com/cli-stuff/platform-tools-i
 
 ## ❤️ Support
 
-If you like this project, consider supporting it by starring ⭐ it on GitHub, sharing it with your friends, or buying me a coffee ☕:
-
-- <https://send.monobank.ua/jar/6rUVs4yasg>
-- <https://donatello.to/okineadev>
+If you like this project, consider supporting it by starring ⭐ it on GitHub, sharing it with your friends, or [buying me a coffee ☕](https://github.com/cli-stuff/platform-tools-installers-cli?sponsor=1)
 
 ## 📜 License
 
