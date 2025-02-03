@@ -1,14 +1,8 @@
 # platform-tools-installers-cli
 
-🚀 It is a command-line scripts designed to quickly install [Android SDK Platform Tools](https://developer.android.com/studio/releases/platform-tools) (ADB, Fastboot) via PowerShell on Windows and other OS's.
+🚀 It is a command-line script designed to quickly install [Android SDK Platform Tools](https://developer.android.com/studio/releases/platform-tools) (ADB, Fastboot) via PowerShell on Windows
 
-## 📦 Supported Platforms
-
-| <div><img src="https://github.com/cli-stuff/dotload/assets/81070564/99544c04-51e7-41b5-95f7-0828cfc97617" alt="Windows logo" width="30"/></div> **Windows** | <div><img src="https://github.com/cli-stuff/dotload/raw/main/public/macos-light-logo.svg#gh-light-mode-only" alt="macOS logo" width="30"/><img src="https://github.com/cli-stuff/dotload/raw/main/public/macos-light-logo.svg#gh-dark-mode-only" alt="macOS logo" width="30"/></div> **macOS** | <div><img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Icons8_flat_linux.svg" alt="Linux logo" width="30"/></div> **Linux** |
-| :-: | :-: | :-: |
-| ✅ | ❌ | ❌ |
-
-## 🛠️ Installation (Windows)
+## 🛠️ Installation
 
 To install Android SDK Platform Tools (ADB, Fastboot) on Windows, simply run the following command in PowerShell:
 
