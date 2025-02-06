@@ -1,4 +1,4 @@
-# platform-tools-installers-cli
+# platform-tools-installer-windows
 
 🚀 It is a command-line script designed to quickly install [Android SDK Platform Tools](https://developer.android.com/studio/releases/platform-tools) (ADB, Fastboot) via PowerShell on Windows
 
