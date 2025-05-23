@@ -58,6 +58,8 @@ if ($agreement -notmatch '^(?i)y$') {
     exit
 }
 
+Add-Type -AssemblyName System.IO.Compression.FileSystem
+
 $downloadUrl = "https://dl.google.com/android/repository/platform-tools-latest-windows.zip"
 $destinationPath = "$env:TEMP\platform-tools-latest-windows.zip"
 $extractPath = "C:\platform-tools"
@@ -65,10 +67,19 @@ $extractPath = "C:\platform-tools"
 Write-Host "📥 Downloading platform-tools..."
 Invoke-WebRequest -Uri $downloadUrl -OutFile $destinationPath -Verbose
 
-
 Write-Host "📦 Extracting platform-tools..."
-Expand-Archive -Path $destinationPath -DestinationPath $extractPath -Force
 
+$tempUnzipPath = Join-Path $env:TEMP "platform-tools-temp"
+Remove-Item -Recurse -Force -ErrorAction SilentlyContinue $tempUnzipPath
+Expand-Archive -Path $destinationPath -DestinationPath $tempUnzipPath -Force
+
+$sourceFolder = Get-ChildItem -Path $tempUnzipPath -Directory | Where-Object { $_.Name -eq "platform-tools" }
+if ($sourceFolder) {
+    Copy-Item -Path $sourceFolder.FullName -Destination $extractPath -Recurse -Force
+    Write-Host "✅ platform-tools extracted to $extractPath"
+} else {
+    Write-Host "❌ platform-tools folder not found in the archive!"
+}
 
 $envPath = [Environment]::GetEnvironmentVariable("Path", "User")
 
