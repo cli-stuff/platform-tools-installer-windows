@@ -3,4 +3,4 @@
 # Normalize EOL for all files that Git considers text files
 * text=auto eol=lf
 
-site/ linguist-vendored
+site/* linguist-vendored
