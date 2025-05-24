@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>platform-tools-installer</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="icon"
+			href="https://www.gstatic.com/devrel-devsite/prod/v6dc4611c4232bd02b2b914c4948f523846f90835f230654af18f87f75fe9f73c/android/images/favicon.svg"
+		/>
+		<meta
+			name="description"
+			content="🛠️ Simple adb and fastboot installer for Windows"
+		/>
+		<meta
+			property="og:description"
+			content="🛠️ Simple adb and fastboot installer for Windows"
+		/>
+
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			html,
+			body {
+				height: 100%;
+			}
+
+			body {
+				font-family: "Manrope", sans-serif;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				justify-content: center;
+				margin: 0;
+				background-color: #f5f5f5;
+				padding: 2rem;
+			}
+
+			h1 {
+				font-size: 2.6rem;
+				font-weight: 800;
+			}
+
+			h3 {
+				margin-top: 0;
+				color: #505050;
+			}
+
+			a {
+				font-weight: 700;
+				color: unset;
+			}
+
+			.install-command {
+				background-color: rgb(210, 234, 255);
+				border-radius: 36px;
+				padding: 12px;
+				display: flex;
+				flex-wrap: nowrap;
+				align-items: center;
+				gap: 12px;
+				margin-top: 20px;
+			}
+
+			.install-command pre {
+				background-color: white;
+				padding: 16px;
+				border-radius: 24px;
+				margin: 0;
+				user-select: all;
+				text-wrap: auto;
+				text-align: left;
+			}
+
+			.install-command button {
+				/* inherit font & color from ancestor */
+				color: inherit;
+				font: inherit;
+
+				/* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+				line-height: normal;
+
+				/* Corrects font smoothing for webkit */
+				-webkit-font-smoothing: inherit;
+				-moz-osx-font-smoothing: inherit;
+
+				/* Corrects inability to style clickable `input` types in iOS */
+				-webkit-appearance: none;
+
+				border: none;
+				box-sizing: content-box;
+
+				cursor: pointer;
+				background-color: rgb(170 215 255);
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				align-self: stretch;
+
+				padding: 10px;
+				border-radius: 24px;
+				min-width: 28px;
+			}
+
+			img#android-builder {
+				width: 230px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+
+			.icon {
+				vertical-align: text-top;
+				margin: 0 3px 0 0;
+			}
+		</style>
+
+		<style>
+			/* Toast notification styles for copy feedback */
+			.toast {
+				position: fixed;
+				bottom: 20px;
+				left: 50%; /* Center horizontally */
+				transform: translateX(-50%); /* Adjust for exact centering */
+				padding: 10px 20px;
+				border-radius: 6px;
+				color: white;
+				font-size: 0.9rem;
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 0.3s ease, visibility 0.3s ease;
+				z-index: 9999; /* Ensure toast is on top */
+			}
+
+			.toast.show {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			.toast.success {
+				background-color: #28a745; /* Green for success */
+			}
+
+			.toast.error {
+				background-color: #dc3545; /* Red for error */
+			}
+		</style>
+	</head>
+	<body>
+		<img
+			id="android-builder"
+			src="./builder-droid.png"
+			alt=""
+			role="img"
+			aria-label=""
+			width="230"
+			height="197.78"
+		/>
+
+		<h1 id="main-title">platform-tools-installer</h1>
+
+		<h3 aria-describedby="main-title">
+			🛠️ Simple adb and fastboot installer for Windows
+		</h3>
+
+		<div class="install-command" role="region" aria-labelledby="install-label">
+			<pre
+				aria-label="Copy install command"
+			><code id="install">powershell -c "irm cutt.ly/platform-tools | iex"</code></pre>
+			<button
+				onclick="copyCode()"
+				aria-label="Copy install command to clipboard"
+				role="button"
+			>
+				<svg
+					aria-hidden="true"
+					xmlns="http://www.w3.org/2000/svg"
+					height="24px"
+					viewBox="0 -960 960 960"
+					width="24px"
+					fill="#e3e3e3"
+				>
+					<path
+						fill="currentColor"
+						d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-520q0-17 11.5-28.5T160-720q17 0 28.5 11.5T200-680v520h400q17 0 28.5 11.5T640-120q0 17-11.5 28.5T600-80H200Zm160-240v-480 480Z"
+					/>
+				</svg>
+			</button>
+		</div>
+
+		<p>
+			<a
+				href="https://github.com/cli-stuff/platform-tools-installer-windows"
+				aria-label="View source code on GitHub"
+				><svg
+					xmlns="http://www.w3.org/2000/svg"
+					height="24px"
+					viewBox="0 -960 960 960"
+					width="24px"
+					fill="#e3e3e3"
+					class="icon"
+				>
+					<path
+						fill="currentColor"
+						d="m193-479 155 155q11 11 11 28t-11 28q-11 11-28 11t-28-11L108-452q-6-6-8.5-13T97-480q0-8 2.5-15t8.5-13l184-184q12-12 28.5-12t28.5 12q12 12 12 28.5T349-635L193-479Zm574-2L612-636q-11-11-11-28t11-28q11-11 28-11t28 11l184 184q6 6 8.5 13t2.5 15q0 8-2.5 15t-8.5 13L668-268q-12 12-28 11.5T612-269q-12-12-12-28.5t12-28.5l155-155Z"
+					/></svg
+				>Source</a
+			>
+		</p>
+
+		<div
+			id="toastNotification"
+			class="toast"
+			role="alert"
+			aria-live="assertive"
+			aria-atomic="true"
+		></div>
+
+		<script>
+			let toastTimeout;
+
+			// Function to show toast notifications
+			function showToast(message, type = "success") {
+				clearTimeout(toastTimeout);
+
+				toastNotification.textContent = message;
+				toastNotification.className = `toast show ${type}`;
+
+				toastTimeout = setTimeout(() => {
+					toastNotification.className = `toast ${type}`;
+				}, 3000);
+			}
+
+			async function copyCode() {
+				const text = document.getElementById("install").innerText;
+				try {
+					await navigator.clipboard.writeText(text);
+					showToast("Copied!");
+				} catch (err) {
+					showToast("Error");
+				}
+			}
+		</script>
+	</body>
+</html>
