@@ -7,7 +7,7 @@
 To install Android SDK Platform Tools (ADB, Fastboot) on Windows, simply run the following command in PowerShell:
 
 ```powershell
-powershell -c "irm cutt.ly/platform-tools | iex"
+powershell -ExecutionPolicy Bypass -c "irm cutt.ly/platform-tools | iex"
 ```
 
 This command downloads and executes the PowerShell script, which automatically installs the required tools from the [original Google package](https://dl.google.com/android/repository/platform-tools-latest-windows.zip).

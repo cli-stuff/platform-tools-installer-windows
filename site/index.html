@@ -179,7 +179,7 @@
 		<div class="install-command" role="region" aria-labelledby="install-label">
 			<pre
 				aria-label="Copy install command"
-			><code id="install">powershell -c "irm cutt.ly/platform-tools | iex"</code></pre>
+			><code id="install">powershell -ExecutionPolicy Bypass -c "irm cutt.ly/platform-tools | iex"</code></pre>
 			<button
 				onclick="copyCode()"
 				aria-label="Copy install command to clipboard"
